@@ -344,11 +344,11 @@ export class Resizable extends React.PureComponent<ResizableProps, State> {
       return getStringSize(this.state[key]);
     };
     const width =
-      size && typeof size.width !== 'undefined' && !this.state.isResizing
+      size && typeof size.width !== 'undefined' //&& !this.state.isResizing
         ? getStringSize(size.width)
         : getSize('width');
     const height =
-      size && typeof size.height !== 'undefined' && !this.state.isResizing
+      size && typeof size.height !== 'undefined' //&& !this.state.isResizing
         ? getStringSize(size.height)
         : getSize('height');
     return { width, height };
